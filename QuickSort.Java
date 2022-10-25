@@ -23,8 +23,8 @@ private static ArrayList<Integer> inputArray = new ArrayList<Integer>();
    }
 
    int partition(int start,int end){
-       System.out.println("\n---------Inicio----------");
-       System.out.println("\nOrdenando:"+start+" to "+end);
+       //System.out.println("\n---------Inicio----------");
+       //System.out.println("\nOrdenando:"+start+" to "+end);
        
        int init = start;
        int length = end;
@@ -33,7 +33,7 @@ private static ArrayList<Integer> inputArray = new ArrayList<Integer>();
        int pivotIndex = nextIntInRange(start,end,r);
        int pivot = inputArray.get(pivotIndex);
        
-       System.out.println("Pivote "+pivot+" en el INDICE:"+pivotIndex);
+       //System.out.println("Pivote "+pivot+" en el INDICE:"+pivotIndex);
                
        while(true){
            while(inputArray.get(length)>pivot && length>start){
@@ -52,12 +52,12 @@ private static ArrayList<Integer> inputArray = new ArrayList<Integer>();
                length--;
                init++;
                
-               System.out.println("\nDespues de Cambiar");
+               //System.out.println("\nDespues de Cambiar");
                for(int i=start;i<=end;i++){
                    System.out.print(inputArray.get(i)+" ");
                }
            }else{
-               System.out.println("\n---------Fin---------");
+              // System.out.println("\n---------Fin---------");
                return length;
            }
        }
